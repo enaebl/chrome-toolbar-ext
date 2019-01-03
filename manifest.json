@@ -1,0 +1,59 @@
+{
+    "manifest_version": 2,
+    "name": "Enaebl Toolbar",
+    "content_security_policy":  "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "description": "This extension allows you to use Enaebl functionalities all over the Web",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "/img/icon.png"
+    },
+
+    "background": {
+        "scripts": [
+            "js/eventPage.js",
+            "js/jquery.min.js"
+        ],
+        "persistent": false
+    },
+
+    "permissions": [
+        "contextMenus",
+        "tts"
+    ],
+
+    "icons": {
+        "16": "/img/icon.png",
+        "48": "/img/icon.png",
+        "128": "/img/icon.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "css": [
+                "css/tooltip.css",
+                "css/jquery.contextMenu.css",
+                "css/collapsible-toolbar.css"
+            ],
+            "js": [
+                "js/jquery.min.js",
+                "js/bootstrap.min.js",
+                "js/fontawesome.js",
+                "js/jquery.contextMenu.js",
+                "js/jquery.ui.position.min.js",
+                "js/content.js",
+                "js/collapsible-toolbar.js"
+            ],
+            "exclude_matches": [
+                "https://app.enaebl.com/*"
+            ]
+        }
+    ],
+
+    "web_accessible_resources": [
+        "/img/*.*"
+    ]
+}

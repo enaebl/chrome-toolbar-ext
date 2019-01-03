@@ -1,0 +1,52 @@
+#enaebl-collapsible-toolbar {
+    position: fixed;
+    top: 70px;
+    float: right;
+    right: 20px;
+    height: 55px;
+}
+
+#enaebl-toolbar {
+    -webkit-transition: width 1s ease;
+    -moz-transition: width 1s ease;
+    -o-transition: width 1s ease;
+    transition: width 1s ease;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+    height: 43px;
+    width: 0px;
+    margin-top: 9px;
+    margin-right: -9px;
+}
+
+#enaebl-toolbar.in {
+    width: 300px;
+    /*border: 3px solid #99a9b5;*/
+}
+
+.enaebl-btn {
+    border: none;
+    background-color: transparent;
+    float: left;
+    cursor: pointer;
+}
+
+.enaebl-btn:not(#enaebl-btn-close) {
+    margin-top: 6px;
+    margin-right: 1px;
+    width: 35px;
+    height: 32px;
+}
+
+#enaebl-btn-close {
+    margin-top: 3px;
+    margin-right: 5px;
+    width: 21px;
+    height: 37px;
+}
+
+#enaebl-btn-settings {
+    margin-left: 17px;
+}
